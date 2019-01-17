@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="ulani local DB">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.11">
+    <root id="1">
+      <ServerVersion>11.2.0.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="LMICHOWS">
+      <ObjectId>91</ObjectId>
+      <IntrospectionTimestamp>2019-01-09.00:31:08</IntrospectionTimestamp>
+      <CreatedTimestamp>2019-01-07.00:11:11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-09.00:31:00</ModifiedTimestamp>
+      <CommentsHash>20323913555207</CommentsHash>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="DIP">
+      <ObjectId>14</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="ORACLE_OCM">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="DBSNMP">
+      <ObjectId>30</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="APPQOSSYS">
+      <ObjectId>31</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="WMSYS">
+      <ObjectId>32</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="EXFSYS">
+      <ObjectId>42</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="CTXSYS">
+      <ObjectId>43</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="XDB">
+      <ObjectId>45</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="ANONYMOUS">
+      <ObjectId>46</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="ORDSYS">
+      <ObjectId>53</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="ORDDATA">
+      <ObjectId>54</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="ORDPLUGINS">
+      <ObjectId>55</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="SI_INFORMTN_SCHEMA">
+      <ObjectId>56</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="MDSYS">
+      <ObjectId>57</ObjectId>
+    </schema>
+    <schema id="21" parent="1" name="OLAPSYS">
+      <ObjectId>61</ObjectId>
+    </schema>
+    <schema id="22" parent="1" name="MDDATA">
+      <ObjectId>65</ObjectId>
+    </schema>
+    <schema id="23" parent="1" name="SPATIAL_WFS_ADMIN_USR">
+      <ObjectId>67</ObjectId>
+    </schema>
+    <schema id="24" parent="1" name="SPATIAL_CSW_ADMIN_USR">
+      <ObjectId>70</ObjectId>
+    </schema>
+    <schema id="25" parent="1" name="SYSMAN">
+      <ObjectId>72</ObjectId>
+    </schema>
+    <schema id="26" parent="1" name="MGMT_VIEW">
+      <ObjectId>74</ObjectId>
+    </schema>
+    <schema id="27" parent="1" name="FLOWS_FILES">
+      <ObjectId>75</ObjectId>
+    </schema>
+    <schema id="28" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>76</ObjectId>
+    </schema>
+    <schema id="29" parent="1" name="APEX_030200">
+      <ObjectId>78</ObjectId>
+    </schema>
+    <schema id="30" parent="1" name="OWBSYS">
+      <ObjectId>79</ObjectId>
+    </schema>
+    <schema id="31" parent="1" name="OWBSYS_AUDIT">
+      <ObjectId>83</ObjectId>
+    </schema>
+    <schema id="32" parent="1" name="SCOTT">
+      <ObjectId>84</ObjectId>
+    </schema>
+    <schema id="33" parent="1" name="HR">
+      <ObjectId>85</ObjectId>
+    </schema>
+    <schema id="34" parent="1" name="OE">
+      <ObjectId>86</ObjectId>
+    </schema>
+    <schema id="35" parent="1" name="IX">
+      <ObjectId>87</ObjectId>
+    </schema>
+    <schema id="36" parent="1" name="SH">
+      <ObjectId>88</ObjectId>
+    </schema>
+    <schema id="37" parent="1" name="PM">
+      <ObjectId>89</ObjectId>
+    </schema>
+    <schema id="38" parent="1" name="BI">
+      <ObjectId>90</ObjectId>
+    </schema>
+    <schema id="39" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <table id="40" parent="2" name="ADRESY">
+      <ObjectId>75768</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="41" parent="2" name="AKTY_WLASNOSCI">
+      <ObjectId>75775</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="42" parent="2" name="DOSTAWCY">
+      <ObjectId>75758</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="43" parent="2" name="DOSTAWY">
+      <ObjectId>75770</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="44" parent="2" name="GRAFIKI">
+      <ObjectId>75765</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:16</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="45" parent="2" name="KLIENCI">
+      <ObjectId>75754</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="46" parent="2" name="PLACOWKI">
+      <ObjectId>75741</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:12</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="47" parent="2" name="PRACOWNICY">
+      <ObjectId>75745</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:12</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="48" parent="2" name="PRODUKTY">
+      <ObjectId>75750</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="49" parent="2" name="RODZAJE_PRODUKTOW">
+      <ObjectId>75777</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="50" parent="2" name="SKLEPY">
+      <ObjectId>75739</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:12</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="51" parent="2" name="STANOWISKA">
+      <ObjectId>75779</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-09.00:31:00</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="52" parent="2" name="TRANSAKCJE">
+      <ObjectId>75771</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="53" parent="2" name="WLASCICIELE">
+      <ObjectId>75772</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="54" parent="2" name="WYNAGRODZENIA">
+      <ObjectId>75762</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:16</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <column id="55" parent="40" name="IDADRESU">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="40" name="MIEJSCOWOSC">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="40" name="ULICA">
+      <Position>3</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="40" name="KOD_POCZTOWY">
+      <Position>4</Position>
+      <DataType>CHAR(6 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="40" name="NUMER_DOMU">
+      <Position>5</Position>
+      <DataType>VARCHAR2(4 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="40" name="NUMER_MIESZKANIA">
+      <Position>6</Position>
+      <Comment>Numer mieszkania</Comment>
+      <DataType>VARCHAR2(4 byte)|0s</DataType>
+    </column>
+    <index id="61" parent="40" name="ADRES_PK">
+      <ObjectId>75769</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDADRESU</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="40" name="ADRES_PK">
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <ColNames>IDADRESU</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>ADRES_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="63" parent="41" name="IDWLASCICIELA">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="41" name="IDSKLEPU">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="41" name="OD_KIEDY">
+      <Position>3</Position>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="41" name="DO_KIEDY">
+      <Position>4</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="67" parent="41" name="WKLAD_WLASNY">
+      <Position>5</Position>
+      <DataType>FLOAT(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="68" parent="41" name="PK_AKTY_WLASNOSCI">
+      <ObjectId>75776</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDWLASCICIELA
+IDSKLEPU
+OD_KIEDY</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="69" parent="41" name="PK_AKTY_WLASNOSCI">
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <ColNames>IDWLASCICIELA
+IDSKLEPU
+OD_KIEDY</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_AKTY_WLASNOSCI</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="70" parent="41" name="WLASCICIEL_POSIADA">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDWLASCICIELA</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>WLASCICIELE</RefTableName>
+      <RefKeyName>PK_WLASCICIELE</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="71" parent="41" name="SKLEP_WYDAJE">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDSKLEPU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>SKLEPY</RefTableName>
+      <RefKeyName>SKLEP_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="72" parent="42" name="IDDOSTAWCY">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="42" name="IMIE">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="42" name="NAZWISKO">
+      <Position>3</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="42" name="NAZWA_FIRMY">
+      <Position>4</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="42" name="IDSKLEPU">
+      <Position>5</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="42" name="IDADRESU">
+      <Position>6</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="78" parent="42" name="DOSTAWCY_PK">
+      <ObjectId>75761</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDDOSTAWCY</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="79" parent="42" name="IX_SKLEP_POSIADA_DOSTAWCOW">
+      <ObjectId>75759</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDSKLEPU</ColNames>
+    </index>
+    <index id="80" parent="42" name="DOSTAWCA_POSIADA_ADRES">
+      <ObjectId>75760</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDADRESU</ColNames>
+    </index>
+    <key id="81" parent="42" name="DOSTAWCY_PK">
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <ColNames>IDDOSTAWCY</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>DOSTAWCY_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="82" parent="42" name="SKLEP_POSIADA_DOSTAWCOW">
+      <ModifiedTimestamp>2019-01-07.00:11:16</ModifiedTimestamp>
+      <ColNames>IDSKLEPU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>SKLEPY</RefTableName>
+      <RefKeyName>SKLEP_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="83" parent="42" name="DOSTAWCA_POSIADA_ADRES">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDADRESU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>ADRESY</RefTableName>
+      <RefKeyName>ADRES_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="84" parent="43" name="IDDOSTAWCY">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="43" name="IDPRODUKTU">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="86" parent="43" name="ILOSC">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="43" name="CENA_NETTO">
+      <Position>4</Position>
+      <DataType>NUMBER(6,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="43" name="CENA_BRUTTO">
+      <Position>5</Position>
+      <DataType>NUMBER(6,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="43" name="DATA">
+      <Position>6</Position>
+      <Comment>Data dostawy</Comment>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="44" name="IDGRAFIKU">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="44" name="DATA">
+      <Position>2</Position>
+      <Comment>Data grafiku</Comment>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="44" name="GODZINA_OD">
+      <Position>3</Position>
+      <DataType>CHAR(5 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="44" name="GODZINA_DO">
+      <Position>4</Position>
+      <DataType>CHAR(5 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="44" name="IDPRACOWNIKA">
+      <Position>5</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="95" parent="44" name="GRAFIKI_PK">
+      <ObjectId>75767</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDGRAFIKU</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="96" parent="44" name="IX_PRACOWNIK_POSIADA">
+      <ObjectId>75766</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDPRACOWNIKA</ColNames>
+    </index>
+    <key id="97" parent="44" name="GRAFIKI_PK">
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <ColNames>IDGRAFIKU</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>GRAFIKI_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="98" parent="44" name="PRACOWNIK_POSIADA_GRAFIK">
+      <ModifiedTimestamp>2019-01-07.00:11:16</ModifiedTimestamp>
+      <ColNames>IDPRACOWNIKA</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>PRACOWNICY</RefTableName>
+      <RefKeyName>PRACOWNICY_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="99" parent="45" name="IDKLIENTA">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="45" name="IMIE">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="45" name="NAZWISKO">
+      <Position>3</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="45" name="PLEC">
+      <Position>4</Position>
+      <DataType>CHAR(2 byte)|0s</DataType>
+    </column>
+    <column id="103" parent="45" name="DATA_URODZENIA">
+      <Position>5</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="104" parent="45" name="NR_DOKUMENTU">
+      <Position>6</Position>
+      <DataType>VARCHAR2(15 byte)|0s</DataType>
+    </column>
+    <column id="105" parent="45" name="NR_TELEFONU">
+      <Position>7</Position>
+      <DataType>VARCHAR2(12 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="106" parent="45" name="E_MAIL">
+      <Position>8</Position>
+      <DataType>VARCHAR2(40 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="107" parent="45" name="IDADRESU">
+      <Position>9</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="108" parent="45" name="IDSKLEPU">
+      <Position>10</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <index id="109" parent="45" name="KLIENCI_PK">
+      <ObjectId>75757</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDKLIENTA</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="110" parent="45" name="KLIENT_POSIADA_ADRES">
+      <ObjectId>75755</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDADRESU</ColNames>
+    </index>
+    <index id="111" parent="45" name="SKLEP_POSIADA_KLIENTOW">
+      <ObjectId>75756</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDSKLEPU</ColNames>
+    </index>
+    <key id="112" parent="45" name="KLIENCI_PK">
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <ColNames>IDKLIENTA</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>KLIENCI_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="113" parent="45" name="KLIENT_POSIADA_ADRES">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDADRESU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>ADRESY</RefTableName>
+      <RefKeyName>ADRES_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="114" parent="45" name="SKLEP_POSIADA_KLIENTOW">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDSKLEPU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>SKLEPY</RefTableName>
+      <RefKeyName>SKLEP_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <check id="115" parent="45" name="SYS_C0012738">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <ColNames>PLEC</ColNames>
+      <Predicate>Plec IN (&apos;M&apos;,&apos;K&apos;)</Predicate>
+    </check>
+    <column id="116" parent="46" name="IDPLACOWKI">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="117" parent="46" name="DATA_ZALOZENIA_PLACOWKI">
+      <Position>2</Position>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="118" parent="46" name="IDSKLEPU">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="119" parent="46" name="IDADRESU">
+      <Position>4</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="120" parent="46" name="PLACOWKI_PK">
+      <ObjectId>75744</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:12</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:12</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDPLACOWKI</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="121" parent="46" name="IX_SKLEP_POSIADA_PLACOWKE">
+      <ObjectId>75742</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:12</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:12</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDSKLEPU</ColNames>
+    </index>
+    <index id="122" parent="46" name="IX_PLACOWKA_POSIADA_ADRES">
+      <ObjectId>75743</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:12</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:12</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDADRESU</ColNames>
+    </index>
+    <key id="123" parent="46" name="PLACOWKI_PK">
+      <ModifiedTimestamp>2019-01-07.00:11:12</ModifiedTimestamp>
+      <ColNames>IDPLACOWKI</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PLACOWKI_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="124" parent="46" name="SKLEP_POSIADA_PLACOWKE">
+      <ModifiedTimestamp>2019-01-07.00:11:16</ModifiedTimestamp>
+      <ColNames>IDSKLEPU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>SKLEPY</RefTableName>
+      <RefKeyName>SKLEP_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="125" parent="46" name="PLACOWKA_POSIADA_ADRES">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDADRESU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>ADRESY</RefTableName>
+      <RefKeyName>ADRES_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="126" parent="47" name="IDPRACOWNIKA">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="47" name="IMIE">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="128" parent="47" name="NAZWISKO">
+      <Position>3</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="129" parent="47" name="DATA_ZATRUDNIENIA">
+      <Position>4</Position>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="130" parent="47" name="PLEC">
+      <Position>5</Position>
+      <DataType>CHAR(2 byte)|0s</DataType>
+    </column>
+    <column id="131" parent="47" name="PESEL">
+      <Position>6</Position>
+      <DataType>CHAR(11 byte)|0s</DataType>
+    </column>
+    <column id="132" parent="47" name="NUMER_TELEFONU">
+      <Position>7</Position>
+      <DataType>VARCHAR2(12 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="133" parent="47" name="IDADRESU">
+      <Position>8</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="134" parent="47" name="IDPLACOWKI">
+      <Position>9</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="135" parent="47" name="IDSTANOWISKA">
+      <Position>10</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="136" parent="47" name="PRACOWNICY_PK">
+      <ObjectId>75749</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDPRACOWNIKA</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="137" parent="47" name="PRACOWNIK_POSIADA_ADRES">
+      <ObjectId>75746</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDADRESU</ColNames>
+    </index>
+    <index id="138" parent="47" name="PLACOWKA_ZATRUDNIA">
+      <ObjectId>75747</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDPLACOWKI</ColNames>
+    </index>
+    <index id="139" parent="47" name="PRACOWNIK_POSIADA_STANOWISKO">
+      <ObjectId>75748</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDSTANOWISKA</ColNames>
+    </index>
+    <key id="140" parent="47" name="PRACOWNICY_PK">
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <ColNames>IDPRACOWNIKA</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PRACOWNICY_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="141" parent="47" name="PRACOWNIK_POSIADA_ADRES">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDADRESU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>ADRESY</RefTableName>
+      <RefKeyName>ADRES_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="142" parent="47" name="PLACOWKA_ZATRUDNIA">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDPLACOWKI</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>PLACOWKI</RefTableName>
+      <RefKeyName>PLACOWKI_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="143" parent="47" name="PRACOWNIK_POSIADA_STANOWISKO">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDSTANOWISKA</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>STANOWISKO</RefTableName>
+      <RefKeyName>PK_STANOWISKO</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <check id="144" parent="47" name="SYS_C0012723">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2019-01-07.00:11:12</ModifiedTimestamp>
+      <ColNames>PLEC</ColNames>
+      <Predicate>Plec IN (&apos;M&apos;,&apos;K&apos;)</Predicate>
+    </check>
+    <column id="145" parent="48" name="IDPRODUKTU">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="146" parent="48" name="NAZWA">
+      <Position>2</Position>
+      <Comment>Nazwa produktu</Comment>
+      <DataType>CHAR(50 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="147" parent="48" name="CENA">
+      <Position>3</Position>
+      <DataType>NUMBER(6,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="148" parent="48" name="DATA_WAZNOSCI">
+      <Position>4</Position>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="149" parent="48" name="IDSKLEPU">
+      <Position>5</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="150" parent="48" name="IDRODZAJPRODUKTU">
+      <Position>6</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="151" parent="48" name="PRODUKTY_PK">
+      <ObjectId>75753</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDPRODUKTU</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="152" parent="48" name="IX_SKLEP_POSIADA_PRODUKTY">
+      <ObjectId>75751</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDSKLEPU</ColNames>
+    </index>
+    <index id="153" parent="48" name="PRODUKT_NALEZY_DO_RODZAJU">
+      <ObjectId>75752</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDRODZAJPRODUKTU</ColNames>
+    </index>
+    <key id="154" parent="48" name="PRODUKTY_PK">
+      <ModifiedTimestamp>2019-01-07.00:11:13</ModifiedTimestamp>
+      <ColNames>IDPRODUKTU</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PRODUKTY_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="155" parent="48" name="SKLEP_POSIADA_PRODUKTY">
+      <ModifiedTimestamp>2019-01-07.00:11:16</ModifiedTimestamp>
+      <ColNames>IDSKLEPU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>SKLEPY</RefTableName>
+      <RefKeyName>SKLEP_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="156" parent="48" name="PRODUKT_NALEZY_DO_RODZAJU">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDRODZAJPRODUKTU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>RODZAJE_PRODUKTOW</RefTableName>
+      <RefKeyName>PK_RODZAJE_PRODUKTOW</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="157" parent="49" name="IDRODZAJPRODUKTU">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="158" parent="49" name="RODZAJ">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="159" parent="49" name="OPIS">
+      <Position>3</Position>
+      <DataType>VARCHAR2(500 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="160" parent="49" name="PK_RODZAJE_PRODUKTOW">
+      <ObjectId>75778</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDRODZAJPRODUKTU</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="161" parent="49" name="PK_RODZAJE_PRODUKTOW">
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <ColNames>IDRODZAJPRODUKTU</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_RODZAJE_PRODUKTOW</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="162" parent="50" name="IDSKLEPU">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="163" parent="50" name="NAZWA">
+      <Position>2</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="164" parent="50" name="DATA_ZALOZENIA">
+      <Position>3</Position>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="165" parent="50" name="POWIERZCHNIA">
+      <Position>4</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <index id="166" parent="50" name="SKLEP_PK">
+      <ObjectId>75740</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:12</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:12</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDSKLEPU</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="167" parent="50" name="SKLEP_PK">
+      <ModifiedTimestamp>2019-01-07.00:11:12</ModifiedTimestamp>
+      <ColNames>IDSKLEPU</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SKLEP_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="168" parent="51" name="IDSTANOWISKA">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="169" parent="51" name="NAZWA">
+      <Position>2</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="170" parent="51" name="OPIS">
+      <Position>3</Position>
+      <DataType>VARCHAR2(500 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="171" parent="51" name="PK_STANOWISKO">
+      <ObjectId>75780</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDSTANOWISKA</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="172" parent="51" name="PK_STANOWISKO">
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <ColNames>IDSTANOWISKA</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_STANOWISKO</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="173" parent="52" name="IDTRANSAKCJI">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="174" parent="52" name="IDPRODUKTU">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="175" parent="52" name="IDKLIENTA">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="176" parent="52" name="DATA_WYSTAWIENIA">
+      <Position>4</Position>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="177" parent="52" name="CENA_NETTO">
+      <Position>5</Position>
+      <DataType>NUMBER(6,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="178" parent="52" name="CENA_BRUTTO">
+      <Position>6</Position>
+      <DataType>NUMBER(6,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="179" parent="53" name="IDWLASCICIELA">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="180" parent="53" name="IMIE">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="181" parent="53" name="NAZWISKO">
+      <Position>3</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="182" parent="53" name="IDADRESU">
+      <Position>4</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="183" parent="53" name="PK_WLASCICIELE">
+      <ObjectId>75774</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDWLASCICIELA</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="184" parent="53" name="WLASCICIEL_MA_ADRES">
+      <ObjectId>75773</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:15</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDADRESU</ColNames>
+    </index>
+    <key id="185" parent="53" name="PK_WLASCICIELE">
+      <ModifiedTimestamp>2019-01-07.00:11:15</ModifiedTimestamp>
+      <ColNames>IDWLASCICIELA</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_WLASCICIELE</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="186" parent="53" name="WLASCICIEL_MA_ADRES">
+      <ModifiedTimestamp>2019-01-07.00:11:17</ModifiedTimestamp>
+      <ColNames>IDADRESU</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>ADRESY</RefTableName>
+      <RefKeyName>ADRES_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="187" parent="54" name="IDWYNAGRODZENIA">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="188" parent="54" name="DATA">
+      <Position>2</Position>
+      <DataType>DATE|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="189" parent="54" name="KWOTA_PODSTAWY">
+      <Position>3</Position>
+      <DataType>NUMBER(6,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="190" parent="54" name="KWOTA_DODATKU">
+      <Position>4</Position>
+      <DataType>NUMBER(6,2 digit)|0s</DataType>
+    </column>
+    <column id="191" parent="54" name="IDPRACOWNIKA">
+      <Position>5</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="192" parent="54" name="WYNAGRODZENIA_PK">
+      <ObjectId>75764</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDWYNAGRODZENIA</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="193" parent="54" name="IX_PRACOWNIK_OTRZYMUJE">
+      <ObjectId>75763</ObjectId>
+      <CreatedTimestamp>2019-01-07.00:11:14</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>IDPRACOWNIKA</ColNames>
+    </index>
+    <key id="194" parent="54" name="WYNAGRODZENIA_PK">
+      <ModifiedTimestamp>2019-01-07.00:11:14</ModifiedTimestamp>
+      <ColNames>IDWYNAGRODZENIA</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>WYNAGRODZENIA_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="195" parent="54" name="PRACOWNIK_OTRZYMUJE">
+      <ModifiedTimestamp>2019-01-07.00:11:16</ModifiedTimestamp>
+      <ColNames>IDPRACOWNIKA</ColNames>
+      <RefSchemaName>LMICHOWS</RefSchemaName>
+      <RefTableName>PRACOWNICY</RefTableName>
+      <RefKeyName>PRACOWNICY_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>
