@@ -33,35 +33,24 @@ public class EmployeeVievController {
     private JFXTextField telField;
 
     @FXML
-    void initialize() {
-        ResultSet rs = null,rs2 = null;
-        Connection connection = null;
+    void initialize() throws SQLException {
+        ResultSet rs;
+        Connection connection;
 
-        ResultSet value = null;
+        connection = DBConnection.getConnection(null);
 
-
-
-        try {
-            connection = DBConnection.getConnection(connection);
-            value = DBConnection.getColumn("SELECT * from Pracownicy",connection);
-           // rs2 = DBConnection.getColumn("SELECT NAZWISKO from Pracownicy",connection,rs);
-
-            nameField.setText(DBConnection.getField(rs, 1));
-           // surnameField.setText(DBConnection.getField(rs, 1));
-           // dateField.setText(DBConnection.getField(rs, 4));
-          //  peselField.setText(DBConnection.getField(rs, 5));
-           // telField.setText(DBConnection.getField(rs, 6));
-
-            //adres musi byc wyuskany inaczej
-            // adressField.setStyle("-fx-text-inner-color: white");
-
-            positionField.setStyle("-fx-text-inner-color: white");
-
-        }catch (SQLException ee){
-            System.out.println("blad w klase EVC2: " + ee);
-
+        rs = DBConnection.getColumn("SELECT * from Pracownicy", connection);
+        while (rs.next()) {
+            System.out.println("wartosc kolumny: " + rs.getInt(1));
+            nameField.setText(rs.getString("IMIE"));
+            surnameField.setText(rs.getString("NAZWISKO"));
+            dateField.setText(rs.getString("DATA_ZATRUDNIENIA"));
+            peselField.setText(rs.getString("PESEL"));
+            telField.setText(rs.getString("NUMER_TELEFONU"));
         }
 
+
+        positionField.setStyle("-fx-text-inner-color: white");
         nameField.setStyle("-fx-text-inner-color: white");
         peselField.setStyle("-fx-text-inner-color: white");
         surnameField.setStyle("-fx-text-inner-color: white");
@@ -78,9 +67,6 @@ public class EmployeeVievController {
         Parent root = null;
 
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
-
-
 
         try {
             root = loader.load(getClass().getResource("sample.fxml"));

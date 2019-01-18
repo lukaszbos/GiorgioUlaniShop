@@ -2,11 +2,12 @@ package database;
 
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DBConnection {
 
     public static Connection getConnection(Connection connection) {
-        // connection = null;
         System.out.println("-------- Oracle JDBC Connection Testing ------");
 
         try {
@@ -28,8 +29,6 @@ public class DBConnection {
 
             connection = DriverManager.getConnection(
                     "jdbc:oracle:thin:@localhost:1521:orcl", "lmichows", "7KKKFsm");
-
-
         } catch (SQLException e) {
 
             System.out.println("Connection Failed! Check output console");
@@ -55,8 +54,6 @@ public class DBConnection {
 
     public static ResultSet getColumn(String sql, Connection connection) {
 
-        System.out.println("jestem przed whilem");
-
         Statement stmt = null;
         try {
             stmt = connection.createStatement();
@@ -81,22 +78,5 @@ public class DBConnection {
         return rs;
     }
 
-    public static String getField(ResultSet rs, int columnIndex) throws SQLException {
-        String value = null;
-        while (rs.next()) {
-            //Retrieve by column name
-            System.out.println("jestem w  whilu, a rs to: " + rs);
-
-            try {
-                System.out.println("id: " + rs.getString(columnIndex));
-                value = rs.getString(columnIndex);
-            } catch (SQLException e) {
-                System.out.println("blad przy id");
-
-                e.printStackTrace();
-            }
-        }
-        return value;
-    }
 
 }
