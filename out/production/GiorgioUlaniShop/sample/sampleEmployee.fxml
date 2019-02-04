@@ -1,35 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="726.0" style="-fx-background-color: #203459;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EmployeeVievController">
-   <children>
-      <JFXButton layoutX="72.0" layoutY="114.0" text="Imie: " textFill="WHITE" />
-      <JFXButton layoutX="72.0" layoutY="157.0" text="Nazwisko:" textFill="WHITE" />
-      <JFXButton layoutX="72.0" layoutY="201.0" text="Data zatrudnienia: " textFill="WHITE" />
-      <JFXButton layoutX="72.0" layoutY="238.0" text="PESEL: " textFill="WHITE" />
-      <JFXButton layoutX="72.0" layoutY="279.0" text="Numer telefonu: " textFill="WHITE" />
-      <JFXButton layoutX="72.0" layoutY="318.0" text="Adres: " textFill="WHITE" />
-      <JFXTextField fx:id="nameField" layoutX="248.0" layoutY="114.0" prefHeight="25.0" prefWidth="411.0" unFocusColor="WHITE" />
-      <JFXTextField fx:id="surnameField" layoutX="248.0" layoutY="157.0" prefHeight="25.0" prefWidth="411.0" unFocusColor="WHITE" />
-      <JFXTextField fx:id="dateField" layoutX="248.0" layoutY="201.0" prefHeight="25.0" prefWidth="411.0" unFocusColor="WHITE" />
-      <JFXTextField fx:id="peselField" layoutX="248.0" layoutY="238.0" prefHeight="25.0" prefWidth="411.0" unFocusColor="WHITE" />
-      <JFXTextField fx:id="telField" layoutX="248.0" layoutY="279.0" prefHeight="25.0" prefWidth="411.0" unFocusColor="WHITE" />
-      <JFXTextField fx:id="adressField" layoutX="248.0" layoutY="318.0" prefHeight="25.0" prefWidth="411.0" unFocusColor="WHITE" />
-      <JFXButton layoutX="72.0" layoutY="414.0" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #0c0c0c;" text="Historia Plac" textFill="WHITE" />
-      <JFXButton layoutX="188.0" layoutY="414.0" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #0c0c0c;" text="Pokaz Grafik" textFill="WHITE" />
-      <JFXButton layoutX="309.0" layoutY="414.0" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #0c0c0c;" text="Zmien dane" textFill="WHITE" />
-      <JFXButton fx:id="logOutButton" layoutX="595.0" layoutY="414.0" onAction="#onLogOutClicked" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #0c0c0c;" text="Wyloguj" textFill="WHITE" />
-      <JFXButton layoutX="72.0" layoutY="362.0" text="Stanowisko: " textFill="WHITE" />
-      <JFXTextField fx:id="positionField" layoutX="248.0" layoutY="362.0" prefHeight="25.0" prefWidth="411.0" unFocusColor="WHITE" />
-      <JFXButton layoutX="76.0" layoutY="26.0" prefHeight="40.0" prefWidth="116.0" style="-fx-background-color: #0c0c0c;" text="Wyswietl produkty" textFill="WHITE" />
-      <ImageView fitHeight="52.0" fitWidth="62.0" layoutX="642.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../res/GU.png" />
-         </image>
-      </ImageView>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0"
+            prefWidth="726.0" style="-fx-background-color: #203459;" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmployeeVievController">
+    <children>
+        <JFXButton layoutX="72.0" layoutY="114.0" text="Imie: " textFill="WHITE"/>
+        <JFXButton layoutX="72.0" layoutY="157.0" text="Nazwisko:" textFill="WHITE"/>
+        <JFXButton layoutX="72.0" layoutY="201.0" text="Data zatrudnienia: " textFill="WHITE"/>
+        <JFXButton layoutX="72.0" layoutY="238.0" text="PESEL: " textFill="WHITE"/>
+        <JFXButton layoutX="72.0" layoutY="279.0" text="Numer telefonu: " textFill="WHITE"/>
+        <JFXButton layoutX="72.0" layoutY="318.0" text="Adres: " textFill="WHITE"/>
+        <JFXTextField fx:id="nameField" layoutX="248.0" layoutY="114.0" prefHeight="25.0" prefWidth="411.0"
+                      unFocusColor="WHITE"/>
+        <JFXTextField fx:id="surnameField" layoutX="248.0" layoutY="157.0" prefHeight="25.0" prefWidth="411.0"
+                      unFocusColor="WHITE"/>
+        <JFXTextField fx:id="dateField" layoutX="248.0" layoutY="201.0" prefHeight="25.0" prefWidth="411.0"
+                      unFocusColor="WHITE"/>
+        <JFXTextField fx:id="peselField" layoutX="248.0" layoutY="238.0" prefHeight="25.0" prefWidth="411.0"
+                      unFocusColor="WHITE"/>
+        <JFXTextField fx:id="telField" layoutX="248.0" layoutY="279.0" prefHeight="25.0" prefWidth="411.0"
+                      unFocusColor="WHITE"/>
+        <JFXTextField fx:id="zipCodeField" layoutX="248.0" layoutY="318.0" prefHeight="25.0" prefWidth="411.0"
+                      unFocusColor="WHITE"/>
+        <JFXButton fx:id="changeData" layoutX="360.0" layoutY="414.0" onAction="#onChangeDataClicked" prefHeight="40.0"
+                   prefWidth="188.0" style="-fx-background-color: #0c0c0c;" text="Change data" textFill="WHITE"/>
+        <JFXButton fx:id="logOutButton" layoutX="595.0" layoutY="414.0" onAction="#onLogOutClicked" prefHeight="40.0"
+                   prefWidth="82.0" style="-fx-background-color: #0c0c0c;" text="Logout" textFill="WHITE"/>
+        <JFXButton layoutX="72.0" layoutY="362.0" text="Stanowisko: " textFill="WHITE"/>
+        <JFXTextField fx:id="positionField" layoutX="248.0" layoutY="362.0" prefHeight="25.0" prefWidth="411.0"
+                      unFocusColor="WHITE"/>
+        <JFXButton fx:id="showButton" layoutX="76.0" layoutY="26.0" onAction="#onShowProductsClicked" prefHeight="40.0"
+                   prefWidth="116.0" style="-fx-background-color: #0c0c0c;" text="Show products" textFill="WHITE"/>
+        <ImageView fitHeight="52.0" fitWidth="62.0" layoutX="642.0" layoutY="20.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../res/GU.png"/>
+            </image>
+        </ImageView>
+    </children>
 </AnchorPane>

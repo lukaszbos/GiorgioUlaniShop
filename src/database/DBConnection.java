@@ -2,20 +2,24 @@ package database;
 
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
+/**
+ * This class provides the most important methods to connect to database and retrive data from database
+ */
 public class DBConnection {
 
+    /**
+     * Connecting with database
+     * @param connection
+     * @return
+     */
     public static Connection getConnection(Connection connection) {
         System.out.println("-------- Oracle JDBC Connection Testing ------");
 
         try {
-
             Class.forName("oracle.jdbc.driver.OracleDriver");
 
         } catch (ClassNotFoundException e) {
-
             System.out.println("Where is your Oracle JDBC Driver?");
             e.printStackTrace();
             return null;
@@ -24,9 +28,7 @@ public class DBConnection {
 
         System.out.println("Oracle JDBC Driver Registered!");
 
-
         try {
-
             connection = DriverManager.getConnection(
                     "jdbc:oracle:thin:@localhost:1521:orcl", "lmichows", "7KKKFsm");
         } catch (SQLException e) {
@@ -34,7 +36,6 @@ public class DBConnection {
             System.out.println("Connection Failed! Check output console");
             e.printStackTrace();
             return connection;
-
         }
 
         if (connection != null) {
@@ -51,7 +52,6 @@ public class DBConnection {
      *
      * @param sql sql code
      */
-
     public static ResultSet getColumn(String sql, Connection connection) {
 
         Statement stmt = null;
@@ -71,9 +71,7 @@ public class DBConnection {
             e.printStackTrace();
         }
         System.out.println("Result Set query: " + rs);
-
         System.out.println("Goodbye!");
-
 
         return rs;
     }

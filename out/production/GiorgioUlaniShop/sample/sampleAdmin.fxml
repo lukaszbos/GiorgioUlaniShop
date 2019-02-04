@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0"
+            prefWidth="726.0" style="-fx-background-color: #203459;" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
+    <children>
+        <JFXButton fx:id="logoutButton" layoutX="286.0" layoutY="371.0" onAction="#onLogoutClicked" prefHeight="25.0"
+                   prefWidth="155.0" style="-fx-background-color: #0c0c0c;" text="Logout" textFill="WHITE"/>
+        <JFXButton fx:id="produktyButton" layoutX="286.0" layoutY="225.0" onAction="#onProductsClicked"
+                   prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #0c0c0c;" text="Products"
+                   textFill="WHITE"/>
+        <JFXButton fx:id="employeeButton" layoutX="286.0" layoutY="161.0" onAction="#onEmployeeClicked"
+                   prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #0c0c0c;" text="Employees"
+                   textFill="WHITE"/>
+    </children>
+</AnchorPane>

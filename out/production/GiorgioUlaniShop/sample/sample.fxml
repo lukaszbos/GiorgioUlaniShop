@@ -6,31 +6,44 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="726.0" style="-fx-background-color: #203459;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0"
+            prefWidth="726.0" style="-fx-background-color: #203459;" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
     <children>
-        <ImageView fitHeight="111.0" fitWidth="181.0" layoutX="273.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../res/GU.png" />
-            </image>
-        </ImageView>
-        <JFXButton fx:id="signUpButton" layoutX="633.0" layoutY="21.0" onAction="#onSignUpButtonClicked" style="-fx-background-color: #0c0c0c;" text="Sign Up" textFill="WHITE" />
-        <JFXButton layoutX="526.0" layoutY="21.0" text="Not member?" textFill="WHITE" />
-        <ImageView fitHeight="25.0" fitWidth="14.0" layoutX="259.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../res/white_password_icon.png" />
-            </image>
-        </ImageView>
-        <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="251.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../res/img-profil.png" />
-            </image>
-        </ImageView>
-        <JFXTextField fx:id="userText" blendMode="ADD" focusColor="WHITE" layoutX="286.0" layoutY="224.0" prefHeight="25.0" prefWidth="155.0" promptText="Username" unFocusColor="WHITE">
+        <JFXButton fx:id="signUpButton" layoutX="633.0" layoutY="21.0" onAction="#onSignUpButtonClicked"
+                   style="-fx-background-color: #0c0c0c;" text="Sign Up" textFill="WHITE"/>
+        <JFXButton layoutX="526.0" layoutY="21.0" text="Not member?" textFill="WHITE"/>
+        <JFXTextField fx:id="userText" blendMode="ADD" focusColor="WHITE" layoutX="286.0" layoutY="224.0"
+                      prefHeight="25.0" prefWidth="155.0" promptText="Username" unFocusColor="WHITE">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </JFXTextField>
-        <JFXButton fx:id="loginButton" layoutX="286.0" layoutY="371.0" onAction="#onLoginClicked" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #0c0c0c;" text="Login" textFill="WHITE" />
-      <JFXPasswordField fx:id="paswordText" blendMode="ADD" focusColor="WHITE" layoutX="286.0" layoutY="294.0" prefHeight="25.0" prefWidth="155.0" promptText="Password" unFocusColor="WHITE" />
+        <JFXButton fx:id="loginButton" layoutX="286.0" layoutY="371.0" onAction="#onLoginClicked" prefHeight="25.0"
+                   prefWidth="155.0" style="-fx-background-color: #0c0c0c;" text="Login" textFill="WHITE"/>
+        <JFXPasswordField fx:id="paswordText" blendMode="ADD" focusColor="WHITE" layoutX="286.0" layoutY="294.0"
+                          prefHeight="25.0" prefWidth="155.0" promptText="Password" unFocusColor="WHITE">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </JFXPasswordField>
+        <ImageView fx:id="logoGU" fitHeight="111.0" fitWidth="181.0" layoutX="273.0" layoutY="46.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../res/GU.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="userIcon" fitHeight="30.0" fitWidth="37.0" layoutX="251.0" layoutY="224.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../res/img-profil.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="passwordIcon" fitHeight="25.0" fitWidth="14.0" layoutX="259.0" layoutY="296.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../res/white_password_icon.png"/>
+            </image>
+        </ImageView>
     </children>
 </AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0"
+            prefWidth="726.0" style="-fx-background-color: #203459;" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductController">
+    <children>
+        <JFXButton fx:id="backButton" layoutX="542.0" layoutY="436.0" onAction="#onBackClicked" prefHeight="25.0"
+                   prefWidth="155.0" style="-fx-background-color: #0c0c0c;" text="Back" textFill="WHITE"/>
+        <TableView fx:id="table" layoutX="187.0" layoutY="24.0" prefHeight="338.0" prefWidth="706.0"
+                   AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+                   AnchorPane.topAnchor="10.0">
+            <columns>
+                <TableColumn fx:id="colName" onEditCommit="#onEditName" prefWidth="144.0" text="Nazwa"/>
+                <TableColumn fx:id="colPrice" onEditCommit="#onEditPrice" prefWidth="123.0" text="Cena"/>
+                <TableColumn fx:id="colType" onEditCommit="#onEditType" prefWidth="153.0" text="Rodzaj produktu"/>
+                <TableColumn fx:id="colShop" onEditCommit="#onEditShop" prefWidth="148.0" text="Sklep"/>
+                <TableColumn fx:id="colDate" onEditCommit="#onEditDate" prefWidth="137.0" text="Data ważności"/>
+            </columns>
+        </TableView>
+        <JFXButton fx:id="addButton" layoutX="36.0" layoutY="396.0" onAction="#onAddClicked" prefHeight="25.0"
+                   prefWidth="155.0" style="-fx-background-color: #0c0c0c;" text="Add" textFill="WHITE"/>
+        <JFXButton fx:id="deleteButton" layoutX="215.0" layoutY="396.0" onAction="#onDeleteClicked" prefHeight="25.0"
+                   prefWidth="155.0" style="-fx-background-color: #0c0c0c;" text="Delete" textFill="WHITE"/>
+        <JFXButton fx:id="confirmButton" layoutX="34.0" layoutY="436.0" onAction="#onConfirmClicked" prefHeight="25.0"
+                   prefWidth="336.0" style="-fx-background-color: #0c0c0c;" text="Confirm" textFill="WHITE"/>
+    </children>
+</AnchorPane>
