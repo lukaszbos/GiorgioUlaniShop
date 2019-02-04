@@ -30,10 +30,10 @@ public class DBConnection {
 
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:oracle:thin:@localhost:1521:orcl", "lmichows", "7KKKFsm");
+                    "jdbc:oracle:thin:@localhost:1521:orcl", "user", "password");
         } catch (SQLException e) {
 
-            System.out.println("Connection Failed! Check output console");
+            System.out.println("Connection Failed! Check output console - wrong password?");
             e.printStackTrace();
             return connection;
         }

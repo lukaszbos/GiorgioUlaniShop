@@ -1,6 +1,5 @@
 package controllers;
 
-import attributes.Enums;
 import attributes.Strings;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
@@ -8,7 +7,6 @@ import database.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-import javax.swing.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -129,21 +127,15 @@ public class EmployeeVievController extends Controller {
     }
 
     @FXML
-    void onHistoryClicked(ActionEvent event) {
-        if (Enums.typKonta == Enums.TypKonta.URSER) {
-            JOptionPane.showMessageDialog(null, " BRAK UPRAWNIEN ADMINISTRATORA", "Failure",
-                    JOptionPane.ERROR_MESSAGE);
-        }
+    void onHistoryClicked(ActionEvent actionEvent) {
+        noAccess(); // method from Controller
 
     }
 
 
     @FXML
-    void onChangeDataClicked(ActionEvent event) {
-        if (Enums.typKonta == Enums.TypKonta.URSER) {
-            JOptionPane.showMessageDialog(null, " BRAK UPRAWNIEN ADMINISTRATORA", "Failure",
-                    JOptionPane.ERROR_MESSAGE);
-        }
+    void onChangeDataClicked(ActionEvent actionEvent) {
+        noAccess(); // method from Controller
     }
 
     public void onGraphicClicked(ActionEvent actionEvent) {
