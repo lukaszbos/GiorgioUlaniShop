@@ -73,6 +73,7 @@ public class LoginController extends Controller implements Initializable {
             setScene(actionEvent, Strings.EMPLOYEE_SAMPLE_PATH);
            //System.out.println(userName);
         } else if (Objects.equals(userName, user2) && Objects.equals(password, password2)) {
+            System.out.println(userName + " " + password);
             enums.setTypKonta(Enums.TypKonta.ADMIN);
             setScene(actionEvent, Strings.ADMIN_SAMPLE_PATH);
             //System.out.println(userName);
