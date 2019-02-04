@@ -6,12 +6,15 @@ import database.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+
+import javax.swing.*;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,6 +27,16 @@ import java.util.ResourceBundle;
  */
 public class ProductController extends Controller implements Initializable {
 
+    @FXML
+    private JFXButton deleteButton;
+    @FXML
+    private JFXButton confirmButton;
+    @FXML
+    private JFXButton refreshButton;
+    @FXML
+    private JFXButton backButton;
+    @FXML
+    private JFXButton addButton;
     @FXML
     private TableView<ModelProductTable> table;
     @FXML
@@ -40,6 +53,16 @@ public class ProductController extends Controller implements Initializable {
     //ta lista umozliwia sledzenie zmian jesli sie pojawia
     ObservableList<ModelProductTable> observableList = FXCollections.observableArrayList();
 
+//    @FXML
+//    public void selected(ActionEvent e)throws IOException,SQLException{
+//
+//        ObservableList<ModelProductTable> selected;
+//        selected = table.getSelectionModel().getSelectedItems();
+//        for (ModelProductTable modelProductTable : selected) {
+//            int id = modelProductTable.getId();
+//            // do whatever you need with id...
+//        }
+//    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -71,6 +94,11 @@ public class ProductController extends Controller implements Initializable {
             System.out.println("Something went wrong! Products weren't retrived: ");
         }
 
+
+        // name, price, type, shop, data;
+        //propertyValueFactory
+        //Creates a default PropertyValueFactory to extract the value from a given
+        //TableView row item reflectively, using the given property name.
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
         colType.setCellValueFactory(new PropertyValueFactory<>("type"));
@@ -104,13 +132,19 @@ public class ProductController extends Controller implements Initializable {
 
     @FXML
     void onAddClicked(ActionEvent event) {
-        noAccess(); // method from Controller
+        if (Enums.typKonta == Enums.TypKonta.URSER) {
+            JOptionPane.showMessageDialog(null," BRAK UPRAWNIEN ADMINISTRATORA","Failure",
+                    JOptionPane.ERROR_MESSAGE);
+        }
 
     }
 
     @FXML
     void onDeleteClicked(ActionEvent event) {
-        noAccess(); // method from Controller
+        if (Enums.typKonta == Enums.TypKonta.URSER) {
+            JOptionPane.showMessageDialog(null," BRAK UPRAWNIEN ADMINISTRATORA","Failure",
+                    JOptionPane.ERROR_MESSAGE);
+        }
 
     }
 
@@ -141,25 +175,34 @@ public class ProductController extends Controller implements Initializable {
     }
 
 
+
     private void updateData(String column, String newValue, String id) {
 
+        // btw it is way better to keep the connection open while the app is running,
+        // and just close it when the app shuts down....
+
+        // the following "try with resources" at least makes sure things are closed:
 
         try {
-            Connection connection = DBConnection.getConnection(null);
-            // ResultSet rsProducts = connection.createStatement().executeQuery(sqlProducts);
-            String sqlUpdate = "    UPDATE PRODUKTY\n" +
-                    "    SET PRODUKTY.NAZWA = 'Cytrulina'\n" +
-                    "    WHERE Produkty.IDPRODUKTU = 1";
-            // PreparedStatement stmt = connection.prepareStatement("UPDATE PRODUKTY SET "+column+" = ? WHERE IDPRODUKTU = ? ");
-            PreparedStatement stmt = connection.prepareStatement(sqlUpdate);
+                Connection connection = DBConnection.getConnection(null);
+                // ResultSet rsProducts = connection.createStatement().executeQuery(sqlProducts);
+                String sqlUpdate = "    UPDATE PRODUKTY\n" +
+                        "    SET PRODUKTY.NAZWA = 'Cytrulina'\n" +
+                        "    WHERE Produkty.IDPRODUKTU = 1";
+               // PreparedStatement stmt = connection.prepareStatement("UPDATE PRODUKTY SET "+column+" = ? WHERE IDPRODUKTU = ? ");
+                PreparedStatement stmt = connection.prepareStatement(sqlUpdate);
 
+            //   ResultSet rsProducts = connection.createStatement().executeQuery(sqlProducts);
+     //   ) {
 
+           // stmt.setString(1, newValue);
             System.out.println("new value: " + newValue);
-            //  stmt.setString(2, id);
+          //  stmt.setString(2, id);
             System.out.println("id: " + id);
             stmt.execute();
         } catch (SQLException ex) {
             System.err.println("Error in udpating view table - product controller");
+            // if anything goes wrong, you will need the stack trace:
             ex.printStackTrace(System.err);
         }
     }
@@ -167,15 +210,21 @@ public class ProductController extends Controller implements Initializable {
     @FXML
     void onConfirmClicked(ActionEvent actionEvent) {
         System.out.println("klikam confirm ");
-
+        
         ObservableList<ModelProductTable> selected;
         selected = table.getSelectionModel().getSelectedItems();
         int id = 1;
         for (ModelProductTable modelProductTable : selected) {
             id = modelProductTable.getId();
+            // do whatever you need with id...
         }
 
         Connection connection = DBConnection.getConnection(null);
+        // ResultSet rsProducts = connection.createStatement().executeQuery(sqlProducts);
+     //   String sqlUpdate = "    UPDATE PRODUKTY\n" +
+       //         "    SET PRODUKTY.NAZWA = 'Cytrulina'\n" +
+         //       "    WHERE Produkty.IDPRODUKTU = 1";
+        // PreparedStatement stmt = connection.prepareStatement("UPDATE PRODUKTY SET PRODUKTY.NAZWA = 'Cytrulina' WHERE Produkty.IDPRODUKTU = 1");
         try {
             PreparedStatement stmt = connection.prepareStatement("UPDATE PRODUKTY SET PRODUKTY.NAZWA = 'Cytrulina' WHERE Produkty.IDPRODUKTU = 1");
 
@@ -185,9 +234,71 @@ public class ProductController extends Controller implements Initializable {
 
         colName.getText();
         ModelProductTable modelProductTable = null;
+       // updateData("Nazwa", "Cytrulina", "0");
 
+///        modelProductTable.getId();
+//        updateData("PNAZWA", colName.getText(), colName.getId());
+
+      //  System.out.println("Event value: " + event.getNewValue());
+//        System.out.println("Get id value: " + modelProductTable.getId());
+
+
+//        Button update = new Button("Update");
+//        update.setOnAction(event -> {
+//            id.getT
+//            System.out.println("wchodze do labmdy ");
+//            ModelProductTable modelProductTable = event.getRowValue();
+//            modelProductTable.setName(event.getNewValue());
+//            updateData("PNAZWA", event.getNewValue(), modelProductTable.getId());
+//            System.out.println("Event value: " + event.getNewValue());
+//            System.out.println("Get id value: " + modelProductTable.getId());
+//        });
 
     }
 
+
+
+    /*
+    private void updateData(String column, String newValue, String id) throws SQLException {
+        Connection connection = DBConnection.getConnection(null);
+        // ResultSet rsProducts = connection.createStatement().executeQuery(sqlProducts);
+        PreparedStatement stmt = connection.prepareStatement("UPDATE PRODUKTY SET "+column+" = ? WHERE IDPRODUKTU = ? ");
+
+
+        Button update = new Button("Update");
+      //  update.setFont(Font.font("SanSerif", 15));
+        update.setOnAction(e -> {
+           // if (validateNumber() & validateFirstName() & validateLastName() & validateEmaill() & validateMobileNo() & validatePassword() & validateFields()) {
+                try {
+                    //String query = "update UserDatabase set ID=?, FirstName=?, LastName=?, Email=?, Username=?, Password=?, DOB=?, Gender=?, MobileNo=?, Hobbies=?, Image=? where ID='" + id.getText() + "' ";
+                    //stmt = conn.prepareStatement(query);
+
+                    stmt.setString(1, newValue);
+
+
+                   // fis = new FileInputStream(file);
+                  //  stmt.setBinaryStream(11, (InputStream) fis, (int) file.length());
+
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Information Dialog");
+                    alert.setHeaderText(null);
+                    alert.setContentText("User details has been updated.");
+                    alert.showAndWait();
+
+                    stmt.execute();
+
+                    stmt.close();
+                 //   clearFields();
+                } catch (SQLException e1) {
+                    //label.setText("SQL Error");
+                    System.err.println(e1);
+                }
+
+           // }
+        });
+
+
+    }
+*/
 
 }

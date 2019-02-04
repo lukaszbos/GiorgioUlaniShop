@@ -1,6 +1,5 @@
 package controllers;
 
-import attributes.Enums;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,7 +9,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -18,6 +16,7 @@ import java.util.Objects;
  * Every controller extends this class
  */
 abstract class Controller {
+
 
     /**
      * Thanks to this method you are able to see pictures in program
@@ -55,16 +54,6 @@ abstract class Controller {
         }
         assert root != null;
         stage.setScene(new Scene(root));
-    }
-
-    /**
-     * No access warning
-     */
-    void noAccess() {
-        if (Enums.typKonta != Enums.TypKonta.ADMIN) {
-            JOptionPane.showMessageDialog(null, " BRAK UPRAWNIEN ADMINISTRATORA", "Failure",
-                    JOptionPane.ERROR_MESSAGE);
-        }
     }
 
 }
