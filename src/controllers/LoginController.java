@@ -71,11 +71,12 @@ public class LoginController extends Controller implements Initializable {
         if ((Objects.equals(userName, user1) && Objects.equals(password, password1))) {
             enums.setTypKonta(Enums.TypKonta.URSER);
             setScene(actionEvent, Strings.EMPLOYEE_SAMPLE_PATH);
-            System.out.println(userName);
-        } else if (true || (Objects.equals(userName, user2) && Objects.equals(password, password2))) {
+           //System.out.println(userName);
+        } else if (Objects.equals(userName, user2) && Objects.equals(password, password2)) {
+            System.out.println(userName + " " + password);
             enums.setTypKonta(Enums.TypKonta.ADMIN);
             setScene(actionEvent, Strings.ADMIN_SAMPLE_PATH);
-            System.out.println(userName);
+            //System.out.println(userName);
         } else {
             JOptionPane.showMessageDialog(null, " Nieprawidlowe haslo lub login!", "Failure", JOptionPane.ERROR_MESSAGE);
         }
