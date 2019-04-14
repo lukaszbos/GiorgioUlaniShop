@@ -4,11 +4,7 @@ import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-/**
- * Class which controlls admin panel
- */
 public class AdminController extends Controller {
-
     @FXML
     private JFXButton employeeButton;
     @FXML
@@ -33,7 +29,5 @@ public class AdminController extends Controller {
     @FXML
     void onEmployeeClicked(ActionEvent event) {
     }
-
-
 }
 

@@ -9,20 +9,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
+import others.User;
 
 import javax.swing.*;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-
 public class LoginController extends Controller implements Initializable {
-
-    /**
-     * okreslenie typu konta Admin czy moze Zwykly uzytkownik
-     */
-    public Enums enums = new Enums();
-
+    private Enums enums = new Enums();
+    private User simpleUser = new User("Michal", "admin");
+    private User admin = new User("admin", "admin");
 
     @FXML
     private ImageView logoGU;
@@ -37,55 +34,63 @@ public class LoginController extends Controller implements Initializable {
     @FXML
     private JFXPasswordField paswordText;
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //setting images on login scene
-        setImage(attributes.Strings.LOGO, logoGU);
-        setImage(attributes.Strings.USER_ICON, userIcon);
-        setImage(attributes.Strings.PASS_ICON, passwordIcon);
+        setImagesOnLoginScreen();
+        adjustFonts();
+    }
 
+    private void setImagesOnLoginScreen() {
+        setImageFromPathToView(Strings.LOGO, logoGU);
+        setImageFromPathToView(Strings.USER_ICON, userIcon);
+        setImageFromPathToView(Strings.PASS_ICON, passwordIcon);
+    }
+
+    private void adjustFonts() {
         userText.setStyle("-fx-text-inner-color: white");
         paswordText.setStyle("-fx-text-inner-color: white");
     }
-
 
     @FXML
     void initialize() {
     }
 
-
     @FXML
     public void onLoginClicked(ActionEvent actionEvent) {
-       // System.out.println("Zostales zalogowany: " + actionEvent);
-
         String userName = userText.getText();
         String password = paswordText.getText();
+        User userTryingToLogIn = new User(userName, password);
 
-        String user1 = "Michal";
-        String password1 = "admin";
-        String user2 = "admin";
-        String password2 = "admin";
-
-
-        if ((Objects.equals(userName, user1) && Objects.equals(password, password1))) {
-            enums.setTypKonta(Enums.TypKonta.URSER);
-            setScene(actionEvent, Strings.EMPLOYEE_SAMPLE_PATH);
-           //System.out.println(userName);
-        } else if (Objects.equals(userName, user2) && Objects.equals(password, password2)) {
-            System.out.println(userName + " " + password);
-            enums.setTypKonta(Enums.TypKonta.ADMIN);
-            setScene(actionEvent, Strings.ADMIN_SAMPLE_PATH);
-            //System.out.println(userName);
+        if (isUserValid(userTryingToLogIn, simpleUser)) {
+            logAsSimpleUser(actionEvent);
+        } else if (isUserValid(userTryingToLogIn, admin)) {
+            logAsAdmin(actionEvent);
         } else {
-            JOptionPane.showMessageDialog(null, " Nieprawidlowe haslo lub login!", "Failure", JOptionPane.ERROR_MESSAGE);
+            showInvalidPassesMessage();
         }
+    }
 
+    private boolean isUserValid(User userTryingToLogIn, User user) {
+        return userTryingToLogIn.equals(user);
+    }
+
+    private void logAsSimpleUser(ActionEvent actionEvent) {
+        enums.setTypKonta(Enums.TypKonta.URSER);
+        setScene(actionEvent, Strings.EMPLOYEE_SAMPLE_PATH);
+        //System.out.println(userName);
+    }
+
+    private void logAsAdmin(ActionEvent actionEvent) {
+        enums.setTypKonta(Enums.TypKonta.ADMIN);
+        setScene(actionEvent, Strings.ADMIN_SAMPLE_PATH);
+    }
+
+    private void showInvalidPassesMessage() {
+        JOptionPane.showMessageDialog(null, " Nieprawidlowe haslo lub login!", "Failure", JOptionPane.ERROR_MESSAGE);
     }
 
     @FXML
     public void onSignUpButtonClicked(ActionEvent actionEvent) {
     }
-
-
 }

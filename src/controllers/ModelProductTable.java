@@ -1,10 +1,10 @@
 package controllers;
 
 public class ModelProductTable {
-    int id;
+    private int id;
     private String name, price, type, shop, data;
 
-    public ModelProductTable(String name, String price, String type, String shop, String data) {
+    ModelProductTable(String name, String price, String type, String shop, String data) {
         this.name = name;
         this.price = price;
         this.type = type;
@@ -16,7 +16,7 @@ public class ModelProductTable {
         return name;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
@@ -24,7 +24,7 @@ public class ModelProductTable {
         return price;
     }
 
-    public void setPrice(String price) {
+    void setPrice(String price) {
         this.price = price;
     }
 
@@ -32,7 +32,7 @@ public class ModelProductTable {
         return type;
     }
 
-    public void setType(String type) {
+    void setType(String type) {
         this.type = type;
     }
 
@@ -40,7 +40,7 @@ public class ModelProductTable {
         return shop;
     }
 
-    public void setShop(String shop) {
+    void setShop(String shop) {
         this.shop = shop;
     }
 
@@ -48,11 +48,11 @@ public class ModelProductTable {
         return data;
     }
 
-    public void setDate(String data) {
+    void setDate(String data) {
         this.data = data;
     }
 
-    public int getId() {
+    int getId() {
         return id;
     }
 }

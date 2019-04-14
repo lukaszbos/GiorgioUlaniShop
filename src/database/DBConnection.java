@@ -1,80 +1,64 @@
 package database;
 
-
 import java.sql.*;
 
-/**
- * This class provides the most important methods to connect to database and retrive data from database
- */
 public class DBConnection {
-
-    /**
-     * Connecting with database
-     * @param connection
-     * @return
-     */
     public static Connection getConnection(Connection connection) {
         System.out.println("-------- Oracle JDBC Connection Testing ------");
+        if (isYourDriverAvailable()) return null;
+        return connectToDatabase(connection);
+    }
 
+    private static boolean isYourDriverAvailable() {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-
         } catch (ClassNotFoundException e) {
             System.out.println("Where is your Oracle JDBC Driver?");
             e.printStackTrace();
-            return null;
-
+            return true;
         }
+        return false;
+    }
 
-        System.out.println("Oracle JDBC Driver Registered!");
-
+    private static Connection connectToDatabase(Connection connection) {
         try {
-            connection = DriverManager.getConnection(
-                    "jdbc:oracle:thin:@localhost:1521:orcl", "user", "password");
+            connection = connectToOracleDatabase();
+            return connection;
         } catch (SQLException e) {
-
-            System.out.println("Connection Failed! Check output console - wrong password?");
             e.printStackTrace();
             return connection;
         }
-
-        if (connection != null) {
-            System.out.println("You made it, take control your database now!");
-        } else {
-            System.out.println("Failed to make connection!");
-        }
-        return connection;
     }
 
+    private static Connection connectToOracleDatabase() throws SQLException {
+        return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "lmichows", "7KKKFsm");
+    }
 
-    /**
-     * Getting data form db
-     *
-     * @param sql sql code
-     */
     public static ResultSet getColumn(String sql, Connection connection) {
-
-        Statement stmt = null;
-        try {
-            stmt = connection.createStatement();
-        } catch (SQLException e) {
-            System.out.println("blad przy stmt");
-            e.printStackTrace();
-
-        }
-        ResultSet rs = null;
-        try {
-            rs = stmt.executeQuery(sql);
-        } catch (SQLException e) {
-            System.out.println("blad przy rs");
-
-            e.printStackTrace();
-        }
-        System.out.println("Result Set query: " + rs);
-        System.out.println("Goodbye!");
-
-        return rs;
+        Statement sqlStatement = getSqlStatement(connection);
+        ResultSet sqlResultSet = setSqlResult(sql, sqlStatement);
+        return sqlResultSet;
     }
 
+    private static Statement getSqlStatement(Connection connection) {
+        Statement sqlStatement = null;
+        try {
+            sqlStatement = connection.createStatement();
+        } catch (SQLException e) {
+            System.out.println("blad przy sqlStatement");
+            e.printStackTrace();
+        }
+        return sqlStatement;
+    }
 
+    private static ResultSet setSqlResult(String sql, Statement sqlStatement) {
+        ResultSet sqlResultSet = null;
+        try {
+            sqlResultSet = sqlStatement.executeQuery(sql);
+        } catch (SQLException e) {
+            System.out.println("blad przy sqlResultSet");
+            e.printStackTrace();
+        }
+        return sqlResultSet;
+    }
 }

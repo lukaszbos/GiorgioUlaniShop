@@ -7,23 +7,25 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
 import java.util.Objects;
 
-
 public class Main extends Application {
-    Stage stage;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        stage = primaryStage;
-        FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(Objects.requireNonNull(getClass().getClassLoader().getResource(Strings.LOGIN_SAMPLE_PATH)));
+        Parent root = getParentRoot();
+        setStage(primaryStage, root);
+    }
 
-        stage.setTitle("GIORGIO ULANI");
-        stage.setScene(new Scene(root));
-        stage.setResizable(false);
-        stage.show();
+    private Parent getParentRoot() throws java.io.IOException {
+        return FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource(Strings.LOGIN_SAMPLE_PATH)));
+    }
+
+    private void setStage(Stage primaryStage, Parent root) {
+        primaryStage.setTitle("GIORGIO ULANI");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
